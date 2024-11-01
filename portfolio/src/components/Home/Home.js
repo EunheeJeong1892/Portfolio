@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
+import ProfilePhoto from "../../assets/img_profile.JPEG";
 
 function Home() {
   return (
@@ -19,7 +20,7 @@ function Home() {
               </h1>
 
               <h1 className="heading-name">
-                I'M
+                I'm
                 <strong className="main-name"> Eunhee (Dora) Jeong</strong>
               </h1>
 
@@ -28,7 +29,9 @@ function Home() {
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}></Col>
+            <Col md={5} style={{ paddingBottom: 20 }}>
+              <img className="home-profile" src={ProfilePhoto} />
+            </Col>
           </Row>
         </Container>
       </Container>
