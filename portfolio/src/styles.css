@@ -12,7 +12,14 @@ html {
     rgba(12, 10, 22, 0.863)
   );
 
-  --imp-text-color: #c770f0;
+  --imp-text-color: #063dcc;
+}
+
+body {
+  background-color: #fffcee !important;
+}
+.react-pdf__Page {
+  color: #222222 !important;
 }
 
 .purple {
@@ -612,7 +619,6 @@ button:focus {
   position: relative !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
   color: white !important;
 }
 
