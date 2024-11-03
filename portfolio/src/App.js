@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Resume from "./components/Resume/Resume";
 import Footer from "./components/Footer";
+import { HelmetProvider } from "react-helmet-async";
 import {
   BrowserRouter as Router,
   Route,
@@ -17,19 +19,24 @@ import "./styles.css";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <Helmet>
+          <title>Eunhee Jeong | Portfolio</title>
+        </Helmet>
+        <div className="App">
+          <Navbar />
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

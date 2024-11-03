@@ -1,14 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Particle from "../Particle";
+import Button from "react-bootstrap/Button";
 import Type from "./Type";
 import ProfilePhoto from "../../assets/img_profile.JPEG";
+import Information from "./Information";
+import { FiDownload } from "react-icons/fi";
+import pdf from "../../assets/EunheeJeong_Resume.pdf";
 
 function Home() {
   return (
     <section>
       <Container fluid className="home-section" id="home">
-        <Particle />
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
@@ -26,6 +28,10 @@ function Home() {
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
+                <Button className="btn-download" href={pdf} target="_blank">
+                  Resume
+                  <FiDownload />
+                </Button>
               </div>
             </Col>
 
@@ -35,6 +41,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
+      <Information></Information>
     </section>
   );
 }
