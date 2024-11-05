@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
@@ -15,7 +16,7 @@ import {
 
 import { CgFileDocument } from "react-icons/cg";
 
-function NavBar() {
+function NavigationBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -53,27 +54,37 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <ScrollLink
+                to="home"
+                smooth={true}
+                duration={300}
+                onClick={() => updateExpanded(false)}
+                className="nav-link" // Bootstrap 스타일을 위한 클래스 추가
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </Nav.Link>
+              </ScrollLink>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
+              <ScrollLink
+                to="about"
+                smooth={true}
+                duration={300}
                 onClick={() => updateExpanded(false)}
+                className="nav-link"
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-              </Nav.Link>
+              </ScrollLink>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
+              <ScrollLink
+                to="resume"
+                smooth={true}
+                duration={300}
                 onClick={() => updateExpanded(false)}
+                className="nav-link"
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
+              </ScrollLink>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
@@ -82,4 +93,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default NavigationBar;
