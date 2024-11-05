@@ -2,19 +2,11 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
-import {
-  AiFillStar,
-  AiOutlineHome,
-  AiOutlineFundProjectionScreen,
-  AiOutlineUser,
-} from "react-icons/ai";
-
+import { MdWorkOutline } from "react-icons/md";
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import pdf from "../assets/EunheeJeong_Resume.pdf";
 
 function NavigationBar() {
   const [expand, updateExpanded] = useState(false);
@@ -77,14 +69,26 @@ function NavigationBar() {
             </Nav.Item>
             <Nav.Item>
               <ScrollLink
-                to="resume"
+                to="work"
                 smooth={true}
                 duration={300}
                 onClick={() => updateExpanded(false)}
                 className="nav-link"
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <MdWorkOutline style={{ marginBottom: "2px" }} /> Work
               </ScrollLink>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link
+                href={pdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                onClick={() => updateExpanded(false)}
+                className="nav-link"
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

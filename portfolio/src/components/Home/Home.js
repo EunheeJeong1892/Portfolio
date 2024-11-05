@@ -26,7 +26,7 @@ function Home() {
                 <strong className="main-name"> Eunhee (Dora) Jeong</strong>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
+              <div style={{ padding: 45, textAlign: "left" }}>
                 <Type />
                 <Button className="btn-download" href={pdf} target="_blank">
                   Resume
