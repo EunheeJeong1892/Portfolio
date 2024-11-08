@@ -64,7 +64,7 @@ section {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #f2ad94 !important;
+  background-color: #063dcc !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -109,12 +109,14 @@ section {
 
 @media (max-width: 767px) {
   .navbar {
-    padding: 1rem 2rem !important;
+    padding: 1rem !important;
     font-size: 1.4rem !important;
-    background-color: #115d8c !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
+  }
+  .container {
+    padding: 0px;
   }
 }
 
@@ -248,6 +250,10 @@ section {
   padding-left: 45px !important;
   color: #063dcc;
 }
+.heading-bottom {
+  padding: 45px;
+  text-align: left;
+}
 
 .main-name {
   color: #063dcc;
@@ -267,10 +273,24 @@ section {
   .Typewriter__wrapper {
     font-size: 1.4em !important;
     font-weight: 500 !important;
-    position: absolute !important;
   }
-  .Typewriter__cursor {
-    display: none !important;
+
+  .heading,
+  .heading-name {
+    text-align: center;
+  }
+
+  .heading-bottom {
+    padding: 45px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-profile {
+    width: 100%;
+    border-radius: 20px;
   }
 }
 
@@ -558,6 +578,9 @@ button:focus {
 @media (max-width: 767px) {
   .tech-icons {
     margin: 10px !important;
+  }
+  .tech-name {
+    width: 3rem;
   }
 }
 
