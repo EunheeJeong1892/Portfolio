@@ -6,6 +6,7 @@ import ProfilePhoto from "../../assets/img_profile.JPEG";
 import Information from "./Information";
 import { FiDownload } from "react-icons/fi";
 import pdf from "../../assets/EunheeJeong_Resume.pdf";
+import GitHub from "./GitHub";
 
 function Home() {
   return (
@@ -39,9 +40,11 @@ function Home() {
               <img className="home-profile" src={ProfilePhoto} />
             </Col>
           </Row>
+
         </Container>
       </Container>
       <Information></Information>
+      <GitHub></GitHub>
     </section>
   );
 }
