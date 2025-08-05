@@ -6,7 +6,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { MdWorkOutline } from "react-icons/md";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
-import pdf from "../assets/EunheeJeong_Resume.pdf";
+import pdf from "../assets/Dora Jeong - CV.pdf";
 
 function NavigationBar() {
   const [expand, updateExpanded] = useState(false);

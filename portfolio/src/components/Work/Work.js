@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import pdf from "../../assets/EunheeJeong_Resume.pdf";
-import { AiOutlineDownload } from "react-icons/ai";
+import { Container } from "react-bootstrap";
 
 function Work() {
   const [width, setWidth] = useState(1200);
