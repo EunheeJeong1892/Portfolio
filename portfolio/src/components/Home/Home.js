@@ -5,7 +5,7 @@ import Type from "./Type";
 import ProfilePhoto from "../../assets/img_profile.JPEG";
 import Information from "./Information";
 import { FiDownload } from "react-icons/fi";
-import pdf from "../../assets/EunheeJeong_Resume.pdf";
+import pdf from "../../assets/Dora Jeong - CV.pdf";
 import GitHub from "./GitHub";
 
 function Home() {
